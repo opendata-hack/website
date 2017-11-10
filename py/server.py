@@ -22,6 +22,10 @@ def root():
 @app.route('/blr2017')
 def event():
 	return static_file('blr2017.html', root='templates')
+
+@app.route('/open-data-workshop')
+def event():
+	return static_file('open-data-workshop.html', root='templates')
 		
 # Static Routes
 @app.route('/<filename:re:.*\.js>')
