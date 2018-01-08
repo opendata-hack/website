@@ -26,6 +26,10 @@ def event():
 @app.route('/open-data-workshop')
 def event():
 	return static_file('open-data-workshop.html', root='templates')
+
+@app.route('/.well-known/acme-challenge/<file_name>')
+def ssl_cert(file_name):
+	return static_file(file_name, root='templates')
 		
 # Static Routes
 @app.route('/<filename:re:.*\.js>')
